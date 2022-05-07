@@ -87,4 +87,14 @@ npm install prisma --save-dev
     	return res.json({message: "Actualizado correctamente"});
     });
     ```
-16.
+16. Agrega un endpoint DELETE para eliminar explorer por ID
+
+    ```
+    app.delete('/explorers/:id', async (req, res) => {
+    	const id = parseInt(req.params.id);
+    	await prisma.explorer.delete({where: {id: id}});
+    	return res.json({message: "Eliminado correctamente"});
+    });
+    ```
+17. a
+18.
