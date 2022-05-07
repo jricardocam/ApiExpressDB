@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE "mCommander" (
+CREATE TABLE "mcommander" (
     "id" SERIAL NOT NULL,
     "name" TEXT NOT NULL,
     "lang" VARCHAR(255) NOT NULL,
@@ -9,8 +9,8 @@ CREATE TABLE "mCommander" (
     "dateCreated" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "lastUpdated" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "mCommander_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "mcommander_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "mCommander_name_key" ON "mCommander"("name");
+CREATE UNIQUE INDEX "mcommander_name_key" ON "mcommander"("name");

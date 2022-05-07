@@ -104,4 +104,6 @@ npm install prisma --save-dev
 
     1. Modificamos el archivo `schema.prisma` agregando una nueva tabla a la DB
     2. Versionamos el nuevo modelo como nuevo cambio en nuestra base de datos, usando el comando: `npx prisma migrate dev --name init`.
-    3.
+    3. Se agregan elementos en el archivo `seed.js.`
+    4. Se corre el archivo: `node prisma/seed.js`
+    5. Se verifica que se hayan agregado los explorers en terminal SQL `/select * from explorers;`

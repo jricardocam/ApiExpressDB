@@ -20,7 +20,7 @@ model explorer {
   lastUpdated DateTime @updatedAt
 }
 
-model mCommander {
+model mcommander {
   id Int @id @default(autoincrement())
   name String @unique
   lang String @db.VarChar(255)
