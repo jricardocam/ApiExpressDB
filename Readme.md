@@ -38,3 +38,4 @@ npm install prisma --save-dev
     });
     ```
 11. Se corre el server `node server.js`
+12. Agrega un nuevo endpoint GET en tu `server.js` que regrese todos los explorers. Prúebalo en la url: `localhost:3000/explorers`
