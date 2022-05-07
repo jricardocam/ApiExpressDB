@@ -39,3 +39,20 @@ npm install prisma --save-dev
     ```
 11. Se corre el server `node server.js`
 12. Agrega un nuevo endpoint GET en tu `server.js` que regrese todos los explorers. Prúebalo en la url: `localhost:3000/explorers`
+
+    ```
+    app.get('/explorers', async (req, res) => {
+      const allExplorers =  await prisma.explorer.findMany({});
+      res.json(allExplorers);
+    });
+    ```
+13. Agrega un nuevo endpoint GET que te regrese el explorer al enviar un ID por query params. Prúebalo en la url: `localhost:3000/explorers/1`
+
+    ```
+    app.get('/explorers/:id', async (req, res) => {
+      const id = req.params.id;
+      const explorer = await prisma.explorer.findUnique({where: {id: parseInt(id)}});
+      res.json(explorer);
+    });
+    ```
+14. a
