@@ -2,7 +2,6 @@ Readme
 
  1.Como primer paso se agregan las dependencias
 
-
 ```
 npm install express --save-dev
 npm install prisma --save-dev
@@ -18,4 +17,24 @@ npm install prisma --save-dev
 9. Se verifica que se hayan agregado los explorers en terminal SQL `/select * from explorers;`
 
    ![img](image/Readme/1651892485361.png)
-10.
+10. Se crea un Archivo `server.js`
+
+    ```
+    const express = require('express');
+    const app = express();
+    app.use(express.json());
+    const port = process.env.PORT || 3000;
+
+    // Require para usar Prisma
+    const { PrismaClient } = require('@prisma/client');
+    const prisma = new PrismaClient();
+
+    app.get('/', (req, res) => {
+      res.json({message: 'alive'});
+    });
+
+    app.listen(port, () => {
+      console.log(`Listening to requests on port ${port}`);
+    });
+    ```
+11. Se corre el server `node server.js`
