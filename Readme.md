@@ -55,4 +55,36 @@ npm install prisma --save-dev
       res.json(explorer);
     });
     ```
-14. a
+14. Agrega un nuevo endpoint POST con el que vas a poder crear nuevos explorers.
+
+    ```
+    app.post('/explorers', async (req, res) => {
+      const explorer = {
+        name: req.body.name,
+        username: req.body.username,
+        mission: req.body.mission
+       };
+      const message = 'Explorer creado.';
+      await prisma.explorer.create({data: explorer});
+      return res.json({message});
+    });
+    ```
+15. Agrega un nuevo endpoint PUT, en el cuál recibirás el ID del explorer a actualizar, y en el cuerpo del request los campos a actualizar, para este caso solo haremos el update del campo mission.
+
+    ```
+    app.put('/explorers/:id', async (req, res) => {
+    	const id = parseInt(req.params.id);
+
+    	await prisma.explorer.update({
+    		where: {
+    			id: id
+    		},
+    		data: {
+    			mission: req.body.mission
+    		}
+    	})
+
+    	return res.json({message: "Actualizado correctamente"});
+    });
+    ```
+16.
