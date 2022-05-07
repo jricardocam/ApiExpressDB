@@ -53,3 +53,16 @@ app.get('/explorers', async (req, res) => {
 	await prisma.explorer.delete({where: {id: id}});
 	return res.json({message: "Eliminado correctamente"});
     });
+
+    //Api Mission Commanders
+
+    app.get('/mCommanders', async (req, res) => {
+      const allCommanders =  await prisma.mcommander.findMany({});
+      res.json(allCommanders);
+    });
+
+    app.get('/mCommanders/:id', async (req, res) => {
+      const id = req.params.id;
+      const commander = await prisma.mcommander.findUnique({where: {id: parseInt(id)}});
+      res.json(commander);
+    });

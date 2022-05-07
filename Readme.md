@@ -1,4 +1,4 @@
-eadme
+**Readme**
 
  1.Como primer paso se agregan las dependencias
 
@@ -107,3 +107,4 @@ npm install prisma --save-dev
     3. Se agregan elementos en el archivo `seed.js.`
     4. Se corre el archivo: `node prisma/seed.js`
     5. Se verifica que se hayan agregado los explorers en terminal SQL `/select * from explorers;`
+    6. Se crea un CRUD para la tabla GET POST PUT DELETE
