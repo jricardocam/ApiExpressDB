@@ -1,4 +1,4 @@
-Readme
+eadme
 
  1.Como primer paso se agregan las dependencias
 
@@ -96,5 +96,12 @@ npm install prisma --save-dev
     	return res.json({message: "Eliminado correctamente"});
     });
     ```
-17. a
-18.
+17. Realiza pruebas en postman ![img](image/Readme/1651949387810.png)![img](image/Readme/1651949372992.png)
+
+    **Api Mission Commander**
+
+    Se realizará una DB con mission Commanders y se consultara como API
+
+    1. Modificamos el archivo `schema.prisma` agregando una nueva tabla a la DB
+    2. Versionamos el nuevo modelo como nuevo cambio en nuestra base de datos, usando el comando: `npx prisma migrate dev --name init`.
+    3.
