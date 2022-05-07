@@ -11,3 +11,4 @@ npm install prisma --save-dev
 2. Se Inicializa prisma de la siguiente forma: `npx prisma ini`
 3. Se Crea base de datos: `create database explorers_api;`
 4. Se modifica el archivo `.env`
+5. Se declara una nueva tabla en la DB en el archivo `schema.prisma`
