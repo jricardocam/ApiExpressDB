@@ -108,3 +108,4 @@ npm install prisma --save-dev
     4. Se corre el archivo: `node prisma/seed.js`
     5. Se verifica que se hayan agregado los explorers en terminal SQL `/select * from explorers;`
     6. Se crea un CRUD para la tabla GET POST PUT DELETE
+    7. Se realizan pruebas con PostMan `https://go.postman.co/workspace/trello~1a747a18-075d-4ecd-b1c2-265510181e21/collection/20665320-e86d5906-e81d-4fb1-910e-1b4bd27afe2a?action=share&creator=20665320`
